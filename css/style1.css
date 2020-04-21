@@ -1,0 +1,1506 @@
+@keyframes brighten1
+{
+    0%
+    {
+        opacity : 0;
+    }
+    100%
+    {
+        opacity : 1;
+    }
+}
+
+@keyframes brighten2
+{
+    0%
+    {
+        opacity : 0;
+    }
+    0%
+    {
+        opacity : 0;
+    }
+    100%
+    {
+        opacity : 1;
+    }
+}
+
+@keyframes fade_away
+{
+    0%
+    {
+        opacity : 1;
+    }
+    100%
+    {
+        opacity : 0.2;
+    }
+}
+
+@keyframes color-change
+{
+    0%
+    {
+        background-color : #199D12;
+    }
+    33%
+    {
+        background-color : #FE9E03;
+    }
+    67%
+    {
+        background-color : blue;
+    }
+    100%
+    {
+        background-color : #199D12;
+    }
+}
+
+@keyframes color_change2
+{
+   0%
+   {
+       background-color : transparent;
+   }
+   20%
+   {
+       background-image : linear-gradient(to right, rgba(0,0,0,0.5),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0));
+   }
+   40%
+   {
+       background-image : linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,0.5),rgba(0,0,0,0),rgba(0,0,0,0),rgba(0,0,0,0));
+   }
+   60%
+   {
+       background-image : linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,0.5),rgba(0,0,0,0),rgba(0,0,0,0));
+   }
+   80%
+   {
+       background-image : linear-gradient(to right, rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,0.5),rgba(0,0,0,0));
+   }
+   100%
+   {
+       background-color : black;
+   }
+}
+
+@keyframes resize
+{
+    0%
+    {
+        width : 100%;
+        height : 100%;   
+    }
+    100%
+    {
+        width : 80%;
+        height : 80%;
+        margin : 10%;
+        border-radius : 50%;
+    }
+}
+
+@keyframes zoom
+{
+    0%
+    {
+        background-size : 100% 120%;
+    }
+    50%
+    {
+        background-size : 150% 150%;
+    }
+    100%
+    {
+        background-size : 100% 120%;
+    }
+}
+
+@keyframes zoom2
+{
+    0%
+    {
+        background-size : 120% 110%;
+    }
+    50%
+    {
+        background-size : 200% 200%;
+    }
+    100%
+    {
+        background-size : 120% 110%;
+    }
+}
+
+*
+{
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+html
+{
+    scroll-behavior : smooth;
+}
+
+p
+{
+    padding : 0;
+    margin : 0;
+    box-sizing : border-box;
+}
+
+body
+{
+    background-color : #ECEAEA;
+    position : relative;
+}
+
+hr
+{
+    border-top : 4px dashed #199D12;
+}
+
+#NavigationBar
+{
+    background-color : #199D12;
+    border-radius : 25px;
+    position : fixed;
+    z-index : 10;
+    width : 100%;
+    height : 50px;
+    left : 0;
+    top : 0;
+    padding-left : 1%;
+    padding-right : 1%;
+    padding-top : 0%;
+    padding-Bottom : 0%;
+    margin : 0;
+    display : inline-block;
+}
+
+#toplogo      
+{
+    position : relative;
+    z-index : 10;
+    width : 50px;
+    height : 50px;
+    margin : 0;
+    margin-left : 25px;
+    float : left;
+}
+
+.Nav_option   
+{
+    position : relative;
+    z-index : 10;
+    float : right;
+    top : 50%;
+    transform : translate(0,-50%);
+    height : 80%;
+    width : 9%;
+    text-align : center;
+    font-family : Arial, Helvetica, sans-serif;
+    color : white;
+    border-radius : 10px;
+    font-size : 20px;
+    font-weight : bold;
+    line-height : 80%;
+    margin-top : 0%;
+    margin-bottom : 0%;
+    margin-left : 1%;
+    margin-right : 1%;
+}
+
+.Nav_option:hover
+{
+    background-color : white;
+    color : #199D12;
+    font-size : 16px;
+    text-transform : uppercase;
+    animation : brighten1 0.5s ease-out;
+}
+
+#covid
+{
+    animation : color-change 1s ease;
+    animation-iteration-count : infinite;
+}
+
+#covid:hover
+{
+    background-color : #FAEB5E;
+    animation : none;
+}
+
+.options
+{
+    text-decoration : none;
+    display : block;
+    position : relative;
+    height : 100%;
+    line-height : 40px;
+    color : white;
+}
+
+.options:visited
+{
+    color : white;
+}
+
+.options:hover
+{
+    color : #199D12;
+}
+
+#return_green
+{
+    position : fixed;
+    bottom : 0;
+    right : 0;
+    z-index : 11;
+    width : 11%;
+    height : 5vh;
+    background-color : #199D12;
+    margin : 1%;
+    padding : 0;
+    clip-path : polygon(10% 20%, 100% 0, 90% 80%, 0 100%);
+}
+
+#return_white
+{
+    position : absolute;
+    z-index : 11;
+    background-color : white;
+    width : 90%;
+    height : 80%;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%,-50%);
+    text-align : center;
+    clip-path : polygon(8% 23%, 100% 0, 92% 77%, 0 100%);
+}
+
+#return_white:hover
+{
+    transition : all 0.3s ease;
+    background-color : #199D12;
+}
+
+#return_link
+{
+    position : relative;
+    z-index : 11;
+    display : block;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%,-45%);
+    text-decoration : none;
+    color : #199D12;
+    font-size : 90%;
+    font-weight : bold;
+    font-family : Arial, Helvetica, sans-serif;
+}
+
+#return_white:hover #return_link
+{
+    transition : all 0.3s ease;
+    color : white;
+}
+
+#top_arrow
+{
+    border : solid #199D12;
+    border-width : 0 3px 3px 0;
+    display : inline-block;
+    padding : 3px;
+    transform : rotate(-135deg);
+    -webkit-transform : rotate(-135deg);
+}
+
+#return_white:hover #top_arrow
+{
+    transition : all 0.3s ease;
+    border : solid white;
+    border-width : 0 3px 3px 0;
+    display : inline-block;
+    padding : 3px;
+    transform : rotate(-135deg);
+    -webkit-transform : rotate(-135deg);
+}
+
+#intro           
+{
+    margin : 0;
+    margin-top : 50px;
+    padding : 0;
+    width : 100%;
+    height : 93vh;
+    background-image : linear-gradient(to bottom, rgba(25,157,18,0.8),rgba(30,194,21,0.8)), url(../images/wallpaper1.jpg);
+    background-size : 100%;
+    position : relative;
+    display : inline-block;
+    text-align : center;
+}
+
+#intro_text
+{
+    position : absolute;
+    left : 50%;
+    top : 35%;
+    transform : translate(-50%,0);
+    background-color : black;
+    transition : all 5s ease;
+    animation : color_change2 5s ease;
+    animation-delay : .5s;
+    animation-fill-mode : backwards;
+    -webkit-background-clip : text;
+    background-clip : text;
+    display : inline-block;
+}
+
+#company_name
+{
+    color : transparent;
+    display : block;
+    font-size : 500%;
+    font-weight : bold;
+    font-family : "Girassol",sans-serif;
+}
+
+#motto           
+{
+    display : block;
+    color : transparent;
+    font-size : 200%;
+    font-weight : bold;
+    font-family : 'Oswald', sans-serif;
+}
+
+#check_surprise
+{
+    color : white;
+    text-decoration : none;
+    font-weight : normal;
+    font-weight : bold;
+    font-size : 120%;
+    font-family : Arial, Helvetica, sans-serif;
+    position : absolute;
+    bottom : 8%;
+    width : 80%;
+    left : 10%;
+}
+
+#check_surprise:hover
+{
+    transition : all 0.5s ease;
+    transform : skewX(15deg) skewY(-4deg);
+    text-shadow : 5px -5px 10px #ECEAEA;
+    font-size : 150%;
+    
+}
+
+.section
+{
+    display : inline-block;
+    width : 90%;
+    border-radius : 10px;
+    border-style : solid;
+    border-color : #199D12;
+    margin : 5%;
+    margin-bottom : 0;
+    background-color : white;
+    box-shadow : 0 0 10px grey;
+    position : relative;
+}
+
+.Section_head
+{
+    font-size : 200%;
+    margin : 2%;
+    font-family : 'Oswald', sans-serif;
+    font-weight : bold;
+    font-variant : small-caps;
+}
+
+#Launching        
+{
+   height : 80vh;
+   perspective : 1500;
+   background-image : url(../images/back5.jpg);
+   background-size : 100% 100%;
+}
+
+.launch-card
+{
+    height : 71%;
+    width : 30%;
+    float : left;
+    margin-left : 2.5%;
+    margin-top : 2.5%;
+    text-align : center;
+    position : relative;
+    backface-visibility : hidden;
+    perspective : 150rem;
+    -moz-perspective : 150rem;
+}
+
+.Launch-products_front
+{
+    height : 100%;
+    width : 100%;
+    margin : 0;
+    padding : 0;
+    box-shadow : 0 0 10px #656565;
+    background-image : url(../images/back4.jpg);
+    background-size : 100% 100%;
+    position : absolute;
+    text-align : center;
+    backface-visibility : hidden;
+    transition : all 1s ease;
+    
+}
+
+.New_products_description
+{
+    font-size : 140%;
+    color : white;
+    font-style : italic;
+    
+    position : absolute;
+    top : 40%;
+    left : 50%;
+    transform : translate(-50%,0);
+}
+
+.Launch-products_back
+{
+    height : 100%;
+    width : 100%;
+    margin : 0;
+    padding : 0;
+    box-shadow : 0 0 10px #656565;
+    text-align : center;
+    position : absolute;
+    background-image : url(../images/back3.png);
+    transform : rotateY(180deg);
+    backface-visibility : hidden;
+    transition : all 1s ease;
+}
+
+.launch-card:hover .Launch-products_front
+{
+    transform : rotateY(180deg);
+}
+
+.launch-card:hover .Launch-products_back
+{
+    transform : rotateY(0);
+}
+
+.soon_img
+{
+    border : 3px solid white;
+    box-shadow : 0 0 10px black;
+    position : absolute;
+}
+
+#electronics1
+{
+    left : 5%;
+    top : 10%;
+    width : 60%;
+    height : 30%;
+    z-index : 5;
+}
+
+#electronics2
+{
+    right : 5%;
+    top : 30%;
+    width : 60%;
+    height : 30%;
+    z-index : 4;
+}
+
+#electronics3
+{
+    left : 15%;
+    bottom : 10%;
+    width : 50%;
+    height : 50%;
+    z-index : 3;
+}
+
+#electronics1:hover
+{
+    z-index : 7;
+    width : 90%;
+    height : 50%;
+    transition : all 0.5s ease;
+}
+
+#electronics2:hover
+{
+    z-index : 7;
+    width : 90%;
+    height : 50%;
+    top : 20%;
+    transition : all 0.5s ease;
+}
+
+#electronics3:hover
+{
+    z-index : 7;
+    width : 70%;
+    height : 70%;
+    transition : all 0.5s ease;
+}
+
+#books1
+{
+    left : 5%;
+    top : 5%;
+    width : 55%;
+    height : 45%;
+    z-index : 5;
+}
+
+#books2
+{
+    right : 5%;
+    top : 20%;
+    width : 45%;
+    height : 55%;
+    z-index : 4;
+}
+
+#books3
+{
+    left : 10%;
+    bottom : 5%;
+    width : 45%;
+    height : 45%;
+    z-index : 3;
+}
+
+#books1:hover
+{
+    z-index : 7;
+    width : 90%;
+    height : 80%;
+    transition : all 0.5s ease;
+}
+
+#books2:hover
+{
+    z-index : 7;
+    width : 70%;
+    height : 80%;
+    top : 10%;
+    transition : all 0.5s ease;
+}
+
+#books3:hover
+{
+    z-index : 7;
+    width : 70%;
+    height : 80%;
+    transition : all 0.5s ease;
+}
+
+#gym1
+{
+    top : 15%;
+    left : 10%;
+    z-index : 5;
+    height : 50%;
+    width : 50%;
+}
+
+#gym2
+{
+    bottom : 15%;
+    right : 10%;
+    z-index : 4;
+    height : 50%;
+    width : 50%;
+}
+
+#gym1:hover
+{
+    z-index : 7;
+    width : 75%;
+    height : 75%;
+    transition : all 0.5s ease;
+}
+
+#gym2:hover
+{
+    z-index : 7;
+    width : 75%;
+    height : 75%;
+    transition : all 0.5s ease;
+}
+
+#surprise         
+{
+    height : 80vh;
+    background-image : url(../images/back6.jpg);
+    background-size : 110% 120%;
+}
+
+.surprise_card
+{
+    height : 71%;
+    width : 30%;
+    float : left;
+    margin-left : 2.5%;
+    margin-top : 2.5%;
+    position : relative;
+    box-shadow : 0 0 10px #656565;
+}
+
+.surprise_img
+{
+    position : absolute;
+    z-index : 2;
+    width : 90%;
+    height : 75%;
+    left : 5%;
+    top : 5%;
+}
+
+.surprise_info
+{
+    position : absolute;
+    z-index : 2;
+    height : 15%;
+    width : 90%;
+    left : 5%;
+    bottom : 4%;
+    font-family : Arial, Helvetica, sans-serif;
+    font-weight : normal;
+}
+
+.surprise_name
+{
+    font-weight : bold;
+    font-size : 120%;
+}
+
+.surprise_price
+{
+    font-weight : normal;
+    font-size : 110%;
+}
+
+.discount_price
+{
+    font-family : "Times New Roman", Times, serif;
+    font-size : 130%;
+    font-weight : bold;
+}
+
+.surprise_mrp
+{
+    color : red;
+    font-size : 80%;
+    font-weight : normal;
+    text-decoration : line-through;
+}
+
+.surprise_discount
+{
+    font-weight : normal;
+    font-size : 110%;
+}
+
+.discount_amount
+{
+    color : #199D12;
+    font-weight : bold;
+}
+
+.know_more_popup
+{
+    position : absolute;
+    z-index : 3;
+    width : 100%;
+    height : 0;
+    bottom : 0;
+    left : 0;
+    background-color : #ECEAEA;
+    transition : height 0.5s;
+}
+
+.know_more_button
+{
+    position : absolute;
+    z-index : 4;
+    width : 40%;
+    height : 50%;
+    left : 50%;
+    top : 25%;
+    text-align : center;
+    transform : translate(-50%,0);
+    border : 3px solid #199D12;
+    border-radius : 15px;
+    opacity : 0;
+}
+
+.know_more_link
+{
+    position : absolute;
+    display : block;
+    width : 100%;
+    margin-top : 5%;
+    text-decoration : none;
+    color : #199D12;
+    opacity : 0;
+}
+
+.surprise_card:hover .know_more_popup
+{
+    height : 20%;
+}
+
+.surprise_card:hover .know_more_button
+{
+    animation : brighten2 0.5s ease-out;
+    opacity : 1;
+}
+
+.surprise_card:hover .know_more_link
+{
+    animation : brighten2 0.5s ease-out;
+    opacity : 1;
+}
+
+.know_more_button:hover
+{
+    background-color : #199D12;
+}
+
+.know_more_button:hover .know_more_link
+{
+    color : white;
+}
+
+.popup_overlay
+{
+    position : fixed;
+    z-index : 20;
+    width : 100%;
+    height : 100vh;
+    top : 0;
+    left : 0;
+    background : rgba(0,0,0,0.7);
+    
+    visibility: hidden;
+    opacity: 0;
+}
+
+.popup_overlay:target
+{
+    transition: opacity 0.5s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup_box
+{
+    position : absolute;
+    width : 60%;
+    height : 40%;
+    left : 20%;
+    top : 30%;
+    background-color : white;
+    font-family : Arial, Helvetica, sans-serif;
+    transition : all 0.5s ease;
+}
+
+.terms_head
+{
+    font-size : 120%;
+    font-weight : bold;
+    text-decoration : underline;
+    left : 5%;
+    top : 10%;
+    position : absolute;
+}
+
+.terms
+{
+    list-style-type : disc;
+    position : absolute;
+    left : 7%;
+    bottom : 0;
+    top : 25%;
+    width : 50%;
+}
+
+.conditions
+{
+    color : black;
+    margin : 0;
+    padding : 0;
+}
+
+.popup_img
+{
+    position : absolute;
+    right : 10%;
+    top : 10%;
+    height : 80%;
+    width : 28%;
+}
+
+.close
+{
+    position : absolute;
+    top : 2%;
+    right : 2%;
+    font-size : 200%;
+    font-weight : bold;
+    text-decoration : none;
+    color : black;
+    transition : all 0.2s;
+}
+
+.close:hover
+{
+    color : #199D12;
+}
+
+#favourites
+{
+    height : 90vh;
+    background-image : url(../images/back1.jpg);
+    background-size : 120% 110%;
+}
+
+.fav_card
+{
+    float : left;
+    width : 17.6%;
+    height : 36%;
+    margin : 0;
+    margin-left : 2%;
+    margin-top : 2%;
+    box-shadow : 0 0 5px grey;
+    position : relative;
+    background-color : #ECEAEA;
+}
+
+.fav_img_cover
+{
+    position : absolute;
+    z-index : 3;
+    width : 100%;
+    height : 100%;
+    opacity : 1;
+    transition : opacity 0.5s;
+}
+
+.fav_card:hover .fav_img_cover
+{
+    opacity : 0;
+}
+
+.fav_img
+{
+    position : absolute;
+    width : 75%;
+    height : 75%;
+    border-radius : 50%;
+    margin : 12.5%;
+    margin-top : 2%;
+    opacity : 0.6;
+}
+
+.fav_info
+{
+    position : absolute;
+    width : 90%;
+    height : 23%;
+    left : 5%;
+    bottom : 5%;
+    padding-bottom : 0;
+    font-family : Arial, Helvetica, sans-serif;
+}
+
+.fav_name
+{
+    font-weight : bold;
+    font-size : 110%;
+}
+
+.fav_sale
+{
+    font-style : italic;
+    font-family : "Times New Roman", Times, serif;
+}
+
+#reviews
+{
+    height : 90vh;
+    background-image : url(../images/back2.jpg);
+    background-size : 120% 110%;
+    animation : zoom2 10s ease-in-out;
+    animation-iteration-count : infinite;
+}
+
+.review_box
+{
+    width : 95%;
+    height : 20%;
+    background-color : #ECEAEA;
+    margin-top : 3%;
+    margin-left : 2.5%;
+    border-radius : 20px;
+    position : relative;
+}
+
+.customer_pic
+{
+    width : 100px;
+    height : 100px;
+    border-radius : 50%;
+    position : absolute;
+    z-index : 1;
+    top : 12%;
+    left : 5%;
+}
+
+.customer_pic:hover
+{
+    animation : fade_away 0.3s ease-in;
+    opacity : 0.2;
+}
+
+.customer_name
+{
+    width : 100px;
+    height : 100px;
+    border-radius : 50%;
+    position : absolute;
+    z-index : 0;
+    top : 12%;
+    left : 5%;
+    text-align : center;
+    font-size : 200%;
+    font-family : Arial, Helvetica, sans-serif;
+}
+
+.customer_name:hover
+{
+    animation : brighten1 0.3s ease-in;
+    opacity : 1;
+}
+
+.review_text
+{
+    font-style : italic;
+    font-size : 130%;
+    width : 78%;
+    height : 80%;
+    position : absolute;
+    right : 5%;
+    top : 20%;
+}
+
+#add_review
+{
+    height : 50vh;
+    background-image : url(../images/sea.jpg);
+    background-size : 100% 120%;
+    animation : zoom 20s ease-in-out;
+    animation-iteration-count : infinite;
+}
+
+#add
+{
+    position : absolute;
+    left : 5%;
+    bottom : 6%;
+    width : 90%;
+    height : 60%;
+    margin : 0;
+    display : inline-block;
+}
+
+label
+{
+    position : relative;
+    top : 2%;
+    left : 5%;
+    margin : 0;
+    font-size : 140%;
+    font-weight : 700;
+    font-family : Arial, Helvetica, sans-serif;
+}
+
+#username
+{
+    position : relative;
+    left : 10%;
+    top : 2%;
+    width : 30%;
+    font-size : 120%;
+    border : 2px solid #199D12;
+}
+
+textarea
+{
+    position : relative;
+    left : 2%;
+    top : 10%;
+    font-size : 120%;
+    width : 95%;
+    height : 40%;
+    border : 2px solid #199D12;
+    font-family : Arial, Helvetica, sans-serif;
+    resize : none;
+}
+
+#submit
+{
+    position : absolute;
+    bottom : 5%;
+    left : 50%;
+    transform : translate(-50%,0);
+    background-color : #199D12;
+    color : white;
+    font-weight : bold;
+    font-size : 110%;
+    width : 10%;
+    height : 20%;
+    border : none;
+}
+
+#submit:hover
+{
+    height : 22%;
+    width : 11%;
+    box-shadow : 0 5px 10px grey;
+}
+
+#footer
+{
+    width : 100%;
+    height : 30vh;
+    margin : 0;
+    padding : 0;
+    background-color : #199D12;
+    margin-top : 5%;
+    position : relative;
+}
+
+#foot_logo
+{
+    float : right;
+    position : relative;
+    right : 3%;
+    top : 10%;
+    width : 6%;
+    height : 40%;
+}
+
+#foot_company_name
+{
+    color : white;
+    font-size : 350%;
+    font-family : "Girassol",sans-serif;
+    float : right;
+    position : relative;
+    margin-right : 5%;
+    top : 20%;
+    height : 50%;
+    line-height : 160%;
+    letter-spacing : 10px;
+}
+
+.footer_links, li
+{
+    width : 100%;
+    height : 25%;
+    margin-bottom : 2%;
+    color : white;
+    font-family : Arial, Helvetica, sans-serif;
+    text-decoration : none;
+}
+
+ul
+{
+    position : relative;
+    left : 5%;
+    top : 15%;
+    width : 30%;
+    height : 70%;
+    list-style : none;
+}
+
+.footer_links:visited
+{
+    text-decoration : none;
+    color : white;
+}
+
+.footer_links:active
+{
+    text-decoration : none;
+    color : white;
+    font-weight : bold;
+}
+
+#icons
+{
+    position : absolute;
+    right : 4%;
+    bottom : 30%;
+    height : 20%;
+    width : 15%;
+    background-color : #199D12;
+}
+
+.fa
+{
+    text-decoration : none;
+    font-size : 200%;
+    color : white;
+    background-color : #199D12;
+    width : 5%;
+    height : 1%;
+    float : right;
+    position : relative;;
+    top : 20%;
+    padding : 0;
+    margin : 1% 3%;
+}
+
+#find_us
+{
+    font-size : 120%;
+    color : white;
+    font-family : Arial, Helvetica, sans-serif;
+}
+
+#copyright
+{
+    position : absolute;
+    top : 51%;
+    right : 22%;
+    font-weight : normal;
+    font-size : 100%;
+    font-family : Arial, Helvetica, sans-serif;
+    color : white;
+    background-color : #199D12;
+}
+
+@media screen and (max-width : 500px)
+{
+    
+    #NavigationBar
+    {
+        height : 50px;
+    }
+
+    #toplogo
+    {
+        height : 25px;
+        width : 25px;
+        margin-left : 5px;
+    }
+
+    .Nav_option
+    {
+        font-size : 6px;
+        width : 10.5%;
+        margin-left : 0;
+        margin-right : 0.5%;
+        line-height : 0.5px;
+        top : 0px;
+        transform : none;
+    }
+
+    .Nav_option:hover
+    {
+        font-size : 6px;
+    }
+
+    #return_link
+    {
+        font-size : 20%;
+    }
+
+    #top_arrow
+    {
+        border-width : 0 1px 1px 0;
+        padding : 1px;
+    }
+
+    #return_white:hover #top_arrow
+    {
+        border-width : 0 1px 1px 0;
+        padding : 1px;
+    }
+
+    #company_name
+    {
+        font-size : 300%;
+    }
+
+    #motto
+    {
+        font-size : 100%;
+    }
+
+    #check_surprise
+    {
+        font-size : 100%;
+    }
+
+    #check_surprise:hover
+    {
+        font-size : 120%;
+    }
+
+    .Section_head
+    {
+        font-size : 140%;
+    }
+
+    #Launching
+    {
+        height : 30vh;
+    }
+
+    .launch-card
+    {
+        height : 65%;
+    }
+
+    .New_products_description
+    {
+        font-size : 60%;
+    }
+
+    #surprise
+    {
+        height : 50vh;
+    }
+
+    .surprise_card
+    {
+        height : 80%;
+    }
+
+    .surprise_img
+    {
+        height : 50%;
+    }
+
+    .surprise_info
+    {
+        bottom : 28%;
+    }
+
+    .surprise_name
+    {
+        font-size : 70%;
+    }
+
+    .surprise_price
+    {
+        font-size : 80%;
+    }
+
+    .discount_price
+    {
+        font-size : 85%;
+    }
+
+    .surprise_mrp
+    {
+        font-size : 60%;
+    }
+
+    .surprise_discount
+    {
+        font-size : 70%;
+    }
+
+    .know_more_button
+    {
+        width : 80%;
+    }
+
+    .know_more_link
+    {
+        font-size : 60%;
+    }
+
+    .popup_box
+    {
+        left : 5%;
+        width : 90%;
+    }
+
+    .terms_head
+    {
+        font-size : 100%;
+    }
+
+    .terms
+    {
+        width : 60%;
+    }
+
+    .conditions
+    {
+        font-size : 90%;
+    }
+
+    .popup_img
+    {
+        top : 20%;
+        height : 65%;
+        right : 5%;
+    }
+
+    #favourites
+    {
+        height : 50vh;
+    }
+
+    .fav_info
+    {
+        width : 100%;
+        left : 2.5%;
+    }
+
+    .fav_name
+    {
+        font-size : 35%;
+    }
+
+    .fav_star
+    {
+        font-size : 40%;
+    }
+
+    .fav_sale
+    {
+        font-size : 40%;
+    }
+
+    #reviews
+    {
+        height : 40vh;
+    }
+
+    .customer_pic
+    {
+        width : 40px;
+        height : 40px;
+        left : 1.5%;
+    }
+
+    .customer_name
+    {
+        width : 40px;
+        height : 40px;
+        left : 1.5%;
+        font-size : 80%;
+    }
+
+    .review_text
+    {
+        font-size : 45%;
+        width : 80%;
+        right : 2%;
+        top : 10%;
+    }
+
+    #add_review
+    {
+        height : 30vh;
+    }
+
+    label
+    {
+        font-size : 80%;
+        top : 0;
+    }
+
+    #username
+    {
+        font-size : 80%;
+        width : 50%;
+        top : 0;
+    }
+
+    textarea
+    {
+        font-size : 80%;
+        top : 5%;
+        height : 50%;
+    }
+
+    #submit
+    {
+        width : 20%;
+        font-size : 70%;
+    }
+
+    #submit:hover
+    {
+        width : 22%;
+    }
+
+    #foot_logo
+    {
+        height : 20%;
+        width : 10%;
+    }
+
+    #foot_company_name
+    {
+        font-size : 150%;
+        letter-spacing : 0px;
+    }
+
+    .footer_links, li
+    {
+        font-size : 70%;
+
+    }
+
+    #icons
+    {
+        width : 25%;
+        bottom : 60%;
+    }
+
+    .fa
+    {
+        font-size : 100%;
+        margin : 1% 8%;
+    }
+
+    #find_us
+    {
+        font-size : 40%;
+    }
+
+    #copyright
+    {
+        font-size : 40%;
+        right : 30%;
+        top : 20%;
+    }
+}
